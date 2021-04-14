@@ -1,9 +1,6 @@
 var express = require('express');
+const hens_controlers= require('../controllers/hens');
 var router = express.Router();
- 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-    res.render('hens', { title: 'Search Results hens' });
-});
- 
+/* GET costumes */
+router.get('/', hens_controlers.hens_view_all_Page );
 module.exports = router;

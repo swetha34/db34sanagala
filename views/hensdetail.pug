@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1= title
+
+  - let hensid = toShow._id
+  - let hensname = toShow.hensname
+  - let habitat = toShow.habitat
+  - let classification = toShow.classification
+  - let price = toShow.price
+  div
+    div.row
+      div(class='hensAttr mr-3') hens ID is:
+      div #{hensid}
+    div.row
+      div(class='hensAttr mr-3') hens name is:
+      div #{hensname}
+    div.row
+      div(class='hensAttr mr-3') habitat:
+      div #{habitat}
+    div.row
+      div(class='hensAttr mr-3') classification:
+      div #{classification}
+    div.row
+      div(class='hensAttr mr-3') hens Cost is:
+      div #{price}

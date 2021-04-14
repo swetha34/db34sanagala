@@ -1,15 +1,14 @@
 extends layout
- 
+
 block content
   h1= title
-  - let hens=[{hensname:"ISA Brown",habitat:"normal tempetrature",classification:"pyrus",price:20},{hensname:"Play Mouth Rock",habitat:"sansy",classification:"lotees",price:25},{hensname:"Orpington",habitat:"hot",classification:"mexican",price:15}]
+  - let hens= results
   div(class="container-fluid mt-3")
   div(class="row")
-    each hen,index in hens
-        div(class="col-sm-4 m-1 p-3" style=("font-weight:bolder") onclick=`buy(${index})`) #{hen.henname} - #{hen.habitat} - #{hen.classification} - #{hen.price}
+    each hens,index in hens
+      div(class="col-sm-4 m-1 p-3" style=("font-weight:bolder") onclick=`buy(${index})`) #{hens.hensname} - #{hens.habitat} - #{hens.classification} - #{hens.price}
   script.
-     
-      function buy(itemNo)
-      {
-        alert(`You purchased Item ${itemNo+1}`)
-      }
+    function buy(itemNo)
+    {
+      alert(`You purchased Item ${itemNo+1}`)
+    }
